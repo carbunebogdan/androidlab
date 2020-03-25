@@ -10,6 +10,14 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
+            android:name=".SettingsActivity"
+            android:label="@string/title_activity_settings"
+            android:parentActivityName=".ListDisplay">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.tppa.lab2_java.ListDisplay" />
+        </activity>
+        <activity
             android:name=".AboutUs"
             android:label="@string/title_activity_about_us"
             android:parentActivityName=".ListDisplay"

@@ -1,5 +1,6 @@
 package com.tppa.lab2_java;
 
+import android.content.Context;
 import android.content.DialogInterface;
 import android.os.Bundle;
 
@@ -16,6 +17,8 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import org.w3c.dom.Text;
+
+import java.io.FileOutputStream;
 
 public class Preferences extends AppCompatActivity implements AddUsername.UsernameListener {
 
@@ -41,11 +44,29 @@ public class Preferences extends AppCompatActivity implements AddUsername.Userna
                 setUsername();
             }
         });
+
+        final Button saveFileBtn = findViewById(R.id.button2);
+        button.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                saveFileToInternalStorage();
+            }
+        });
     }
 
     public void setUsername() {
         AddUsername exampleDialog = new AddUsername();
         exampleDialog.show(getSupportFragmentManager(), "example dialog");
+    }
+
+    public void saveFileToInternalStorage() {
+        FileOutputStream fos;
+        try {
+            fos = openFileOutput("internal_file.txt", Context.MODE_PRIVATE);
+            fos.write("test".getBytes());
+            fos.close();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
     @Override

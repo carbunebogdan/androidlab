@@ -6,4 +6,6 @@
         android:title="Contact"></item>
     <item android:id="@+id/aboutus"
         android:title="About us"></item>
+    <item android:id="@+id/settings"
+        android:title="Settings"></item>
 </menu>

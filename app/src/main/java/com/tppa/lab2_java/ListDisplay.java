@@ -103,9 +103,10 @@ public class ListDisplay extends AppCompatActivity implements NavigationView.OnN
         navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
+                Intent intent;
                 switch (menuItem.getItemId()) {
                     case R.id.preferences:
-                        Intent intent = new Intent(ListDisplay.this, Preferences.class);
+                        intent = new Intent(ListDisplay.this, Preferences.class);
                         startActivity(intent);
 //                newGame();
                         return true;
@@ -115,6 +116,9 @@ public class ListDisplay extends AppCompatActivity implements NavigationView.OnN
                     case R.id.aboutus:
 //                showHelp();
                         return true;
+                    case R.id.settings:
+                        intent = new Intent(ListDisplay.this, SettingsActivity.class);
+                        startActivity(intent);
                     default:
                         return false;
                 }
@@ -124,9 +128,10 @@ public class ListDisplay extends AppCompatActivity implements NavigationView.OnN
 
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
+        Intent intent;
         switch (menuItem.getItemId()) {
             case R.id.preferences:
-                Intent intent = new Intent(ListDisplay.this, Preferences.class);
+                intent = new Intent(ListDisplay.this, Preferences.class);
                 startActivity(intent);
 //                newGame();
                 return true;
@@ -135,6 +140,10 @@ public class ListDisplay extends AppCompatActivity implements NavigationView.OnN
                 return true;
             case R.id.aboutus:
 //                showHelp();
+                return true;
+            case R.id.settings:
+                intent = new Intent(ListDisplay.this, SettingsActivity.class);
+                startActivity(intent);
                 return true;
             default:
                 return false;
