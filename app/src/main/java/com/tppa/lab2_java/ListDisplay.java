@@ -105,6 +105,11 @@ public class ListDisplay extends AppCompatActivity implements NavigationView.OnN
             public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
                 Intent intent;
                 switch (menuItem.getItemId()) {
+                    case R.id.sensors:
+                        intent = new Intent(ListDisplay.this, SensorActivity.class);
+                        startActivity(intent);
+//                newGame();
+                        return true;
                     case R.id.preferences:
                         intent = new Intent(ListDisplay.this, Preferences.class);
                         startActivity(intent);
@@ -130,6 +135,11 @@ public class ListDisplay extends AppCompatActivity implements NavigationView.OnN
     public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
         Intent intent;
         switch (menuItem.getItemId()) {
+            case R.id.sensors:
+                intent = new Intent(ListDisplay.this, SensorActivity.class);
+                startActivity(intent);
+//                newGame();
+                return true;
             case R.id.preferences:
                 intent = new Intent(ListDisplay.this, Preferences.class);
                 startActivity(intent);

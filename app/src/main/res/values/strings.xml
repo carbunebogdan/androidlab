@@ -26,4 +26,13 @@
     <string name="attachment_summary_on">Automatically download attachments for incoming emails
     </string>
     <string name="attachment_summary_off">Only download attachments when manually requested</string>
+    <string name="title_activity_sensor">SensorActivity</string>
+    <string name="error_no_sensor">No sensor</string>
+
+    <string name="label_proximity">Proximity (cm): %1$.2f</string>
+    <string name="label_light">Light (lux): %1$.2f</string>
+    <string name="label_pressure">Pressure (hPa): %1$.2f</string>
+    <string name="label_humidity">Relative humidity (percentage): %1$.2f</string>
+    <string name="label_temperature">Ambient temperature (celsius): %1$.2f</string>
+    <string name="label_magnetic">Magnetic field: North: %1$.2f</string>
 </resources>
