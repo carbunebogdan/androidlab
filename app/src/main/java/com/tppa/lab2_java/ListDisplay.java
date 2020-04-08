@@ -124,6 +124,9 @@ public class ListDisplay extends AppCompatActivity implements NavigationView.OnN
                     case R.id.settings:
                         intent = new Intent(ListDisplay.this, SettingsActivity.class);
                         startActivity(intent);
+                    case R.id.camera:
+                        intent = new Intent(ListDisplay.this, CameraActivity.class);
+                        startActivity(intent);
                     default:
                         return false;
                 }
